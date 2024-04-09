@@ -1,16 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form action="/pets/orders" method="post">
+            <label> <button type="submit">Отправить</button> </label>
 
-    <!--Форму размещай тут-->
 
-</main>
+            <label for="petType">Выберите животное:
+                <select name="petType" id="petType">
+                    <option value="dog">Собака</option>
+                    <option value="cat">Кошка</option>
+                </select>
+            </label>
+
+
+            <label for="gender">Пол:
+                <select name="gender" id="gender">
+                    <option value="boy">Мальчик</option>
+                    <option value="girl">Девочка</option>
+                    <option value="none">Не указано</option>
+                </select>
+            </label>
+
+            <label for="eyeColor">Цвет глаз:
+                <input type="color" name="eyeColor" id="eyeColor">
+            </label>
+
+            <label for="tailLength">Длина хвоста (см):
+                <input type="number" name="tailLength" id="tailLength" min="7" max="120">
+            </label>
+
+            <label for="name">Имя:
+                <input type="text" name="name" id="name">
+            </label>
+
+
+            <label for="dateOfBirth">Дата рождения:
+                <input type="date" name="dateOfBirth" id="dateOfBirth">
+            </label>
+
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+            </label>
+
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" name="phone" id="phone">
+            </label>
+
+
+            <label> <input type="radio" name="rules" value="true"> Согласен с правилами сайта </label>
+
+            <form>
+    </main>
 </body>
+
 </html>
